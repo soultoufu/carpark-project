@@ -4,4 +4,4 @@ app = FastAPI()
 
 @app.get("/")
 async def root():
-    return {"message": "Hello WOrlding"}
+    return {"message": "Didi took an L"}
