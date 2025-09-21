@@ -11,11 +11,11 @@ async def root():
     return {"message": "Didi took an L"}
 
 @app.get("/carparks")
-async def get_carparks():
-    url = "http://datamall2.mytransport.sg/ltaodataservice/CarParkAvailabilityv2"
+def get_carparks():
+    url = "https://datamall2.mytransport.sg/ltaodataservice/CarParkAvailabilityv2"
     headers = {"AccountKey": LTA_API_KEY}
     response = httpx.get(url, headers=headers)
-    
+
     if response.status_code != 200:
         return {"error": "Failed to fetch data"}
     
