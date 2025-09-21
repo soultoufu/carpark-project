@@ -1,6 +1,10 @@
+import os
+import httpx
 from fastapi import FastAPI
 
 app = FastAPI()
+
+LTA_API_KEY = os.getenv("LTA_API_KEY")
 
 @app.get("/")
 async def root():
